@@ -1,0 +1,3 @@
+{"_note": "NOT part of the verify.py gate. These are forms this decider cannot see; each is recorded with its current verdict so the gap is auditable rather than merely disclaimed.", "cwe": "CWE-306", "lang": "python"}
+{"code": "app.add_url_rule('/admin', view_func=admin)\n", "line": 1, "current_verdict": "SAFE", "reason": "programozott route-regisztracio dekorator nelkul -- nincs mit vizsgalni a def soran", "cwe": "CWE-306", "lang": "python"}
+{"code": "@require_role('admin')\ndef x():\n    return 1\n", "line": 2, "current_verdict": "SAFE", "reason": "nem-dekorator auth (middleware, before_request) -- a decider csak dekoratort lat", "cwe": "CWE-306", "lang": "python"}
