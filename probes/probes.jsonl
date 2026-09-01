@@ -1,0 +1,19 @@
+{"code": "@app.route('/admin')\ndef admin():\n    return dump()\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.post('/users')\ndef create_user():\n    return save()\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python"}
+{"code": "@router.delete('/item/{id}')\nasync def remove(id: int):\n    return drop(id)\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python"}
+{"code": "@bp.route('/secret', methods=['POST'])\ndef secret():\n    return s\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.route('/x')\n@cache.cached(timeout=60)\ndef x():\n    return 1\n", "line": 3, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.route('/admin')\n@login_required\ndef admin():\n    return dump()\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.route('/me')\n@jwt_required()\ndef me():\n    return u\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.get('/data')\n@requires_auth\nasync def data():\n    return d\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.route('/p')\n@permission_required('admin')\ndef p():\n    return 1\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "@app.route('/s')\n@staff_member_required\ndef s():\n    return 1\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "def helper(x):\n    return x + 1\n", "line": 1, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "@functools.lru_cache()\ndef compute(n):\n    return n * 2\n", "line": 2, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python"}
+{"code": "class A:\n    @property\n    def get(self):\n        return 1\n", "line": 3, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@app.errorhandler(404)\ndef nf(e):\n    return 'x'\n", "line": 2, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@app.route('/a')\n@app.route('/b')\n@login_required\ndef multi():\n    return 1\n", "line": 4, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@celery.task\ndef job():\n    return 1\n", "line": 2, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@app.route('/a')\ndef a():\n    return 1\n", "line": 1, "expected_verdict": "SAFE", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@api.get('/items')\nasync def items():\n    return []\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
+{"code": "@app.websocket('/ws')\nasync def ws(sock):\n    return 1\n", "line": 2, "expected_verdict": "FLAG", "cwe": "CWE-306", "lang": "python", "origin": "held-out adversarial (near-miss / boundary)"}
